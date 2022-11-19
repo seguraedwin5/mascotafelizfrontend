@@ -1,18 +1,19 @@
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+<ul id="dropdownmascotas" class="dropdown-content">
+    <li><a routerLink="/administrador/crear-mascota">Crear Mascota</a></li>
+    <li><a routerLink="/administrador/buscar-mascota">Buscar Mascota</a></li>
+    <li><a routerLink="/administrador/editar-mascota">Editar Mascota</a></li>
+    <li><a routerLink="/administrador/eliminar-mascota">Eliminar Mascota</a></li>
   </ul>
   <nav class="blue lighten-2">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a routerLink="/inicio" class="brand-logo"><i class="material-icons">pets</i>Mascota Feliz</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
+        <li><a class="dropdown-trigger" href="" data-target="dropdownmascotas">Mascotas<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a routerLink="/seguridad/registrarse">Registrarse</a></li>
+        <li><a routerLink="/seguridad/login">Login</a></li>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        
       </ul>
     </div>
   </nav>

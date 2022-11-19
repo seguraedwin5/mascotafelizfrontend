@@ -5,6 +5,7 @@ import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CambioclaveComponent } from './cambioclave/cambioclave.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { CambioclaveComponent } from './cambioclave/cambioclave.component';
   ],
   imports: [
     CommonModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class SeguridadModule { }
