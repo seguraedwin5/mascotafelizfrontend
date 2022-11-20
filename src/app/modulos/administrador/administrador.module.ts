@@ -14,7 +14,7 @@ import { CrearSolicitudComponent } from './solicitudes/crear-solicitud/crear-sol
 import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-solicitud.component';
 import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
 import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -31,11 +31,14 @@ import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eli
         CrearSolicitudComponent,
         EditarSolicitudComponent,
         BuscarSolicitudComponent,
-        EliminarSolicitudComponent
+    EliminarSolicitudComponent,
+    
+        
   ],
   imports: [
     CommonModule,
-    AdministradorRoutingModule
+    AdministradorRoutingModule,
+    SweetAlert2Module
   ]
 })
 export class AdministradorModule { }

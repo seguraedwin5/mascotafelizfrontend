@@ -1,19 +1,41 @@
 <!-- Dropdown Structure -->
-<ul id="dropdownmascotas" class="dropdown-content">
-    <li><a routerLink="/administrador/crear-mascota">Crear Mascota</a></li>
-    <li><a routerLink="/administrador/buscar-mascota">Buscar Mascota</a></li>
-    <li><a routerLink="/administrador/editar-mascota">Editar Mascota</a></li>
-    <li><a routerLink="/administrador/eliminar-mascota">Eliminar Mascota</a></li>
-  </ul>
-  <nav class="blue lighten-2">
-    <div class="nav-wrapper">
-      <a routerLink="/inicio" class="brand-logo"><i class="material-icons">pets</i>Mascota Feliz</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a class="dropdown-trigger" href="" data-target="dropdownmascotas">Mascotas<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a routerLink="/seguridad/registrarse">Registrarse</a></li>
-        <li><a routerLink="/seguridad/login">Login</a></li>
-        <!-- Dropdown Trigger -->
+
+  <nav class="navbar navbar-dark bg-dark navbar-expand">
+    <div class="container-fluid">
+      <a routerLink="/inicio" class="navbar-brand"><i class="material-icons">pets</i> Mascota Feliz</a>
+      
+      <div>
+        <ul class="navbar-nav">
+          <li *ngIf="isLogged" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdownmascotas"  role="button" data-bs-toggle="dropdown">Mascotas</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" routerLink="/administrador/crear-mascota">Crear Mascota</a></li>
+              <li><a class="dropdown-item" routerLink="/administrador/buscar-mascota">Buscar Mascota</a></li>
+              <li><a class="dropdown-item" routerLink="/administrador/editar-mascota">Editar Mascota</a></li>
+              <li><a class="dropdown-item" routerLink="/administrador/eliminar-mascota">Eliminar Mascota</a></li>
+            </ul>
+          
+          </li>
         
-      </ul>
+        
+        </ul>
+      </div>
+      <div>
+        <ul class="nav justify-content-end">
+        
+          <li *ngIf="!isLogged" class="nav-item"><a  routerLink="/seguridad/registrarse" class="nav-link">Registrarse</a></li>
+          <li *ngIf="!isLogged" class="nav-item"><a routerLink="/seguridad/login" class="nav-link">LogIn</a></li>
+          <li *ngIf="isLogged" class="nav-item"><a routerLink="/seguridad/logout">LogOut</a></li>
+        
+          <!-- Dropdown Trigger -->
+          
+        </ul>
+      </div>
+      
+      
     </div>
+    
   </nav>
+  
+  <!-- Dropdown Trigger -->
+  

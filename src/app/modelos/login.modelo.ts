@@ -1,6 +1,7 @@
 import { ModeloDatos } from "./datos.modelo";
 
 export class ModeloLogin{
-    datos?: ModeloDatos;
+    datos?: ModeloDatos ;
     accesstoken?: string;
+
 }

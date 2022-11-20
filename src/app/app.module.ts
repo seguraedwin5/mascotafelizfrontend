@@ -7,7 +7,8 @@ import { NavbarComponent } from './plantilla/navbar/navbar.component';
 import { FooterComponent } from './plantilla/footer/footer.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import {} from 'materialize-css'
 @NgModule({
   declarations: [
     AppComponent,

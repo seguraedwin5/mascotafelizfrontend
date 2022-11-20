@@ -6,4 +6,9 @@ export class ModeloDatos{
     nombre?: string;
     correo?: string;
     rol?: string;
+    islogged?: boolean;
+
+    constructor() {
+        this.islogged = false;
+    }
 }

@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
+import Swal from 'sweetalert2'; 
+
 const cryptojs = require('crypto-js')
 @Component({
   selector: 'app-login',
@@ -10,7 +13,7 @@ const cryptojs = require('crypto-js')
 export class LoginComponent implements OnInit {
 
   
-  constructor( private fb : FormBuilder, private servicioseguridad: SeguridadService) { }
+  constructor( private fb : FormBuilder, private servicioseguridad: SeguridadService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -26,13 +29,16 @@ export class LoginComponent implements OnInit {
     let password:string = this.fgvalidator.controls['password'].value;
     let clavecifrada:string = cryptojs.SHA256(password).toString();
     
-    this.servicioseguridad.Login(usuario, clavecifrada).subscribe({
+    this.servicioseguridad.Login$(usuario, clavecifrada).subscribe({
       next: (datos: any) => {
-        
-        console.log(datos.datos.nombre);
-        alert('datos correctos: info - ' + datos.datos.nombre);
+        //guardar datos y token en local storage
+        this.servicioseguridad.AlmacenarSesion(datos);
+        this.router.navigate(['/inicio']);
+        Swal.fire('Hey', `Bienvenido ${datos.datos.nombre}`, 'success');
       },
-      error: (error:any) => console.error(error)
+      error: (error: any) => {
+        Swal.fire('Hey', `Datos Incorrectos`, 'error');
+      }
       });
   }
 
