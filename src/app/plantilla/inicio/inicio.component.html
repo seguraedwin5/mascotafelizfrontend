@@ -1,4 +1,41 @@
-<h1>Bienvenido a Mascota Feliz</h1>
-<h3>Mision</h3>
-<h3>Vision</h3>
+
+    <div class="fluid-container">
+        <h1 class="text-center">Bienvenido a Mascota Feliz</h1>
+        
+
+        <div style="height: 400px;">
+            <img src="../assets/img/portada.jpg" alt="" class="w-100 h-100">
+        </div>
+        <article>
+            
+        </article>
+        <div>
+
+        </div>
+        
+    </div>
+    <div class="p-5 d-flex justify-content-around">
+        <div class="card shadow p-3 mb-5 bg-white rounded col-3 m-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Mision</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Nuestra Mision</h6>
+              <p class="card-text">Es hacer que nuestros clientes tengan beneficios para sus mascotas, y ofrecer la tranquilidad ya que nos aseguramos de su buen cuidado.  <fa-icon [icon]="['fas','paw']"></fa-icon></p>
+              <a routerLink="/administrador/crear-solicitud" class="btn btn-sm btn-outline-success card-link col-6">Realiza tu solicitud</a>
+              <a routerLink="/seguridad/registro" class="btn btn-sm btn-outline-info card-link col-5">Conoce Nuestros Planes!</a>
+            </div>
+          </div>
+          <div class="card shadow p-3 mb-5 bg-white rounded col-3 m-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Vision</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Nuestra Vision</h6>
+              <p class="card-text">Tenemos la meta de ser la empresa mas confiable para sus mascotas, ofreciendo un gran catalogo de servicios, y una excelente atención al cliente.</p>
+              <a routerLink="/administrador/crear-solicitud" class="btn btn-sm btn-outline-success card-link col-6">Realiza tu solicitud</a>
+              <a routerLink="/seguridad/registro" class="btn btn-sm btn-outline-info card-link col-5">Conoce Nuestros Planes!</a>
+            </div>
+          </div>
+    </div>
+
+
+
+
 <a routerLink="/login" class="btn btn-danger">Iniciar</a>

@@ -1,1 +1,13 @@
-<p>crear-mascota works!</p>
+<div class="container">
+    <form method="post" [formGroup]="fgvalidador" (ngSubmit)="GuardarDatos()">
+        <div class="mb-3">
+          <label for="txt_nombre" class="form-label">Nombre</label>
+          <input formControlName="nombre" type="text" class="form-control" id="txt_nombre" >
+        </div>
+        <div class="mb-3">
+          <label for="txt_tipo" class="form-label">Tipo</label>
+          <input formControlName="tipo" type="text" class="form-control" id="txt_tipo">
+        </div>
+        <button [disabled]="!fgvalidador.valid" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

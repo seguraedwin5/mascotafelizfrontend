@@ -10,7 +10,7 @@ import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faFacebook, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faPaw} from '@fortawesome/free-solid-svg-icons'
+import { faPaw, faBug} from '@fortawesome/free-solid-svg-icons'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,7 @@ import { faPaw} from '@fortawesome/free-solid-svg-icons'
 export class AppModule {
   
   constructor(library: FaIconLibrary) {
-    library.addIcons(faFacebook, faGithub, faGoogle, faInstagram, faLinkedin, faTwitter,faPaw);
+    library.addIcons(faFacebook, faGithub, faGoogle, faInstagram, faLinkedin, faTwitter,faPaw, faBug);
   }
 
  }

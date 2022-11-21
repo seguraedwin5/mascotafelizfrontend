@@ -15,6 +15,7 @@ import { EditarSolicitudComponent } from './solicitudes/editar-solicitud/editar-
 import { BuscarSolicitudComponent } from './solicitudes/buscar-solicitud/buscar-solicitud.component';
 import { EliminarSolicitudComponent } from './solicitudes/eliminar-solicitud/eliminar-solicitud.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   imports: [
     CommonModule,
     AdministradorRoutingModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AdministradorModule { }

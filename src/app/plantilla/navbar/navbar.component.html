@@ -1,6 +1,6 @@
 <!-- Dropdown Structure -->
 
-  <nav class="navbar navbar-dark bg-dark navbar-expand">
+  <nav class="navbar navbar-dark bg-dark navbar-expand sticky-top">
     <div class="container-fluid">
       <a routerLink="/inicio" class="navbar-brand"><fa-icon [icon]="['fas','paw']"></fa-icon> Mascota Feliz</a>
       
@@ -23,9 +23,9 @@
             </ul>
           
           </li>
-          <li *ngIf="!isLogged" class="nav-item"><a  routerLink="/seguridad/registrarse" class="btn btn-success">Registrarse</a></li>
-          <li *ngIf="!isLogged" class="nav-item"><a routerLink="/seguridad/login" class="btn btn-info">LogIn</a></li>
-          <li *ngIf="isLogged " class="nav-item"><a routerLink="/seguridad/logout" class="btn btn-danger">LogOut</a></li>
+          <li *ngIf="!isLogged" class="nav-item me-2"><a  routerLink="/seguridad/registrarse" class="btn btn-success">Registrarse</a></li>
+          <li *ngIf="!isLogged" class="nav-item me-2"><a routerLink="/seguridad/login" class="btn btn-info">LogIn</a></li>
+          <li *ngIf="isLogged " class="nav-item me-2"><a routerLink="/seguridad/logout" class="btn btn-danger">LogOut</a></li>
         
           <!-- Dropdown Trigger -->
           

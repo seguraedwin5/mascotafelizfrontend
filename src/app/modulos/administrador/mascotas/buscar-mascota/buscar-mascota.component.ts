@@ -14,12 +14,14 @@ export class BuscarMascotaComponent implements OnInit {
   constructor(private serviciomascotas:MascotasService) { }
 
   ngOnInit(): void {
+    this.ObtenerlistadoMascotas();
   }
 
 
   ObtenerlistadoMascotas() {
     this.serviciomascotas.ListarMascotas$().subscribe({
       next: (datos: ModeloMascota[]) => {
+        console.log(datos);
         this.listadomascotas = datos;
       }
     })

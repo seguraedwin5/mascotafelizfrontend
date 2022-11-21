@@ -19,27 +19,14 @@
             <div class="col-sm-11">
               <input class="form-control" id="password" type="password" formControlName="password" placeholder="password">
             </div>
+            
         </div>
-        
-        <div class="row">          
-          <div class="input-field col s12 m12 l12  login-text">
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember me</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
+        <div class="form-group row m-5 d-flex justify-content-center">
+          <div class="col-sm-3 ">
             <button type="submit" class="btn btn-outline-info" [disabled]="!fgvalidator.valid">Login</button>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="#">Register Now!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small"><a href="#">Forgot password?</a></p>
-          </div>          
-        </div>
+        
 
       </form>
     </div>

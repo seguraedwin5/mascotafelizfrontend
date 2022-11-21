@@ -12,7 +12,7 @@
             <tr *ngFor="let m of listadomascotas">
                 <td>{{m.nombre}}</td>
                 <td>{{m.tipo}}</td>
-                <td><a routerLink="administrador/editar-mascota/{{m.id}}" class="btn btn-outline-primary">Editar</a></td>
+                <td><a routerLink="/administrador/editar-mascota/{{m.id}}" class="btn btn-outline-primary">Editar</a></td>
             </tr>
         </tbody>
     </table>
