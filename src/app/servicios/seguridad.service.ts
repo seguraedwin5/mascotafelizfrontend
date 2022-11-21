@@ -60,7 +60,10 @@ export class SeguridadService {
     
   };
 
-  
+  ObtenerToken() {
+    let datos = this.ObtenerSesion();
+    return datos.accesstoken
+  }
 
   
 }

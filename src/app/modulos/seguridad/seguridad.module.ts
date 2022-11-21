@@ -7,7 +7,10 @@ import { RegistroComponent } from './registro/registro.component';
 import { CambioclaveComponent } from './cambioclave/cambioclave.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component'
-
+import { FontAwesomeModule , FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faUnlockKeyhole, faPaw } from '@fortawesome/free-solid-svg-icons'
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -20,8 +23,16 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component'
     SeguridadRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
+    SweetAlert2Module,
+    SweetAlert2Module.forRoot(),
+    SweetAlert2Module.forChild()
    
 
   ]
 })
-export class SeguridadModule { }
+export class SeguridadModule {
+  constructor( library: FaIconLibrary) {
+    library.addIcons(faEnvelope,faUnlockKeyhole,faPaw);
+  }
+ }

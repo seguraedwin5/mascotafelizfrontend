@@ -8,7 +8,9 @@ import { FooterComponent } from './plantilla/footer/footer.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
-import {} from 'materialize-css'
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFacebook, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faPaw} from '@fortawesome/free-solid-svg-icons'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +23,15 @@ import {} from 'materialize-css'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,//importarlo !importante para el servicio de seguridad
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faFacebook, faGithub, faGoogle, faInstagram, faLinkedin, faTwitter,faPaw);
+  }
+
+ }

@@ -1,1 +1,20 @@
-<p>buscar-mascota works!</p>
+<a class="btn btn-outline-secondary" routerLink="/administrador/crear-mascota">Registrar Mascota</a>
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>           
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of listadomascotas">
+                <td>{{m.nombre}}</td>
+                <td>{{m.tipo}}</td>
+                <td><a routerLink="administrador/editar-mascota/{{m.id}}" class="btn btn-outline-primary">Editar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

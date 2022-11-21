@@ -2,12 +2,19 @@
 
   <nav class="navbar navbar-dark bg-dark navbar-expand">
     <div class="container-fluid">
-      <a routerLink="/inicio" class="navbar-brand"><i class="material-icons">pets</i> Mascota Feliz</a>
+      <a routerLink="/inicio" class="navbar-brand"><fa-icon [icon]="['fas','paw']"></fa-icon> Mascota Feliz</a>
       
       <div>
         <ul class="navbar-nav">
-          <li *ngIf="isLogged" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="dropdownmascotas"  role="button" data-bs-toggle="dropdown">Mascotas</a>
+          
+        
+        
+        </ul>
+      </div>
+      <div>
+        <ul class="nav justify-content-end ">
+          <li *ngIf="isLogged  && rol === 'admin'" class="nav-item dropdown">
+            <a class="btn btn-outline-dark text-bg-light dropdown-toggle " id="dropdownmascotas"  role="button" data-bs-toggle="dropdown">Mascotas</a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" routerLink="/administrador/crear-mascota">Crear Mascota</a></li>
               <li><a class="dropdown-item" routerLink="/administrador/buscar-mascota">Buscar Mascota</a></li>
@@ -16,16 +23,9 @@
             </ul>
           
           </li>
-        
-        
-        </ul>
-      </div>
-      <div>
-        <ul class="nav justify-content-end">
-        
-          <li *ngIf="!isLogged" class="nav-item"><a  routerLink="/seguridad/registrarse" class="nav-link">Registrarse</a></li>
-          <li *ngIf="!isLogged" class="nav-item"><a routerLink="/seguridad/login" class="nav-link">LogIn</a></li>
-          <li *ngIf="isLogged" class="nav-item"><a routerLink="/seguridad/logout">LogOut</a></li>
+          <li *ngIf="!isLogged" class="nav-item"><a  routerLink="/seguridad/registrarse" class="btn btn-success">Registrarse</a></li>
+          <li *ngIf="!isLogged" class="nav-item"><a routerLink="/seguridad/login" class="btn btn-info">LogIn</a></li>
+          <li *ngIf="isLogged " class="nav-item"><a routerLink="/seguridad/logout" class="btn btn-danger">LogOut</a></li>
         
           <!-- Dropdown Trigger -->
           

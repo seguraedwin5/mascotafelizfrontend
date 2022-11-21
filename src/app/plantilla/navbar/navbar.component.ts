@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { ModeloDatos } from 'src/app/modelos/datos.modelo';
-import { ModeloLogin } from 'src/app/modelos/login.modelo';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 
 @Component({
@@ -10,6 +7,9 @@ import { SeguridadService } from 'src/app/servicios/seguridad.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  //iconos
+  
 
   isLogged: boolean = false;
   rol: string = "";
