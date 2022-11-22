@@ -1,1 +1,20 @@
-<p>registro works!</p>
+<form method="post" [formGroup]="fgvalidador" (ngSubmit)="RegistrarCliente()">
+    <div class="row m-3 g-3">
+        <div class="form-group col-md-5">
+            <label for="txt_nombre">Nombre</label>
+            <input formControlName="nombre" type="text" class="form-control" id="txt_nombre" placeholder="Nombre">
+          </div>
+          <div class="form-group col-md-5">
+            <label for="txt_apellido">Apellido</label>
+            <input formControlName="apellido" type="text" class="form-control" id="txt_apellido" placeholder="Apellido">
+          </div>
+      <div class="form-group col-md-5">
+        <label for="txt_email">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="txt_email" placeholder="Email">
+      </div>
+      
+        
+    </div>
+    <button type="submit" class="btn btn-primary col-2 align-self-start ms-4">Registrarse</button>
+    
+  </form>
